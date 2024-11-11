@@ -16,7 +16,7 @@ export const createUrl = async (req, res) => {
     const newUrl = await createShortUrl(shortUrl, longUrl);
     handleResponse(res, 201, "Url created successfully", newUrl);
   } catch (error) {
-    next(error);
+    console.log(error.message);
   }
 };
 

@@ -5,7 +5,7 @@ const createUrlTable = async () => {
   CREATE TABLE IF NOT EXISTS urls (
   id SERIAL PRIMARY KEY,
   shortUrl VARCHAR(100) NOT NULL,
-  longUrl VARCHAR(2048) NOT NULL,
+  longUrl VARCHAR(2048) NOT NULL UNIQUE,
   created_at TIMESTAMP DEFAULT NOW()
 )
   `;
